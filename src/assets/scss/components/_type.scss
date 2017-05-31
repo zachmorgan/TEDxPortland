@@ -1,6 +1,11 @@
+html {
+  @include fluid-type($min_width, $max_width, $min_font, $max_font);
+}
+
 h1 {
   font-family: $font-stack;
-  font-size: 3.8em;
+  font-size: $mod_1*$mod_1*$mod_1*$mod_1*$mod_1*$mod_1 *1rem; 
+  @include fluid-type($min_width, $max_width, $mod_1*$mod_1*$mod_1 *$min_font, $mod_2*$mod_2*$mod_2*$mod_2*$mod_2 *$min_font);
   color: $tedBlack;
 }
 
@@ -10,32 +15,40 @@ h2, h3, h4, h5, h6 {
 }
 
 h2 {
-  font-size: 3em;
+  font-size: $mod_1*$mod_1*$mod_1*$mod_1*$mod_1 *1rem; 
+  @include fluid-type($min_width, $max_width, $mod_1*$mod_1*$mod_1 *$min_font, $mod_2*$mod_2*$mod_2*$mod_2 *$min_font);
 }
 
 h3 {
-  font-size: 2.6em;
+  font-size: $mod_1*$mod_1*$mod_1*$mod_1 *1rem; 
+  @include fluid-type($min_width, $max_width, $mod_1*$mod_1*$mod_1 *$min_font, $mod_2*$mod_2*$mod_2 *$min_font);
   margin-top: 0.4em;
   margin-bottom: 0.2em;
 }
 
 h4 {
-  font-size: 2em;
+  font-size: $mod_1*$mod_1*$mod_1 *1rem; 
+  @include fluid-type($min_width, $max_width, $mod_1*$mod_1*$mod_1 *$min_font, $mod_2*$mod_2*$mod_2 *$min_font);
 }
 
 h5 {
-  font-size: 1em;
+  font-size: $mod_1*$mod_1*$mod_1 *1rem;
+  @include fluid-type($min_width, $max_width, $mod_1*$mod_1 *$min_font, $mod_2*$mod_2 *$min_font);
   color: $tedBlack;
 }
 
 h6 {
-  font-size: 0.75em;
+  font-size: $mod_1*$mod_1 *1rem;
+  @include fluid-type($min_width, $max_width, $mod_1 *$min_font, $mod_2 *$min_font);
   font-style: italic;
   color: $tedRed;
 }
 
-p {
-  
+
+p, ul, ol, li, form, input, textarea, button {
+  font-size: 0.8*$mod_1 *1rem;
+  @include fluid-type($min_width, $max_width, $mod_1 *$min_font, $mod_2 *$min_font);
+  line-height: 1.4em;
 }
 
 .tedX {
