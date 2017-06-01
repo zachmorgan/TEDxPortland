@@ -49,6 +49,11 @@ p, ul, ol, li, form, input, textarea, button {
   font-size: 0.8*$mod_1 *1rem;
   @include fluid-type($min_width, $max_width, $mod_1 *$min_font, $mod_2 *$min_font);
   line-height: 1.4em;
+  list-style: none;
+}
+
+.row {
+	width: 90%;
 }
 
 .tedX {
